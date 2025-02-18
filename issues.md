@@ -117,3 +117,16 @@ sudo mkdir /mnt/ccache
 sudo mount --bind /home/$USER/.ccache /mnt/ccache
 ccache -M 100G -F 0
 ```
+
+
+---
+## No devices listed in WebRTC after successful CVD start
+
+**Command**
+```
+HOME=${PWD}/out launch_cvd
+```
+
+**Solution**
+
+Maybe you have just tried after android-cuttlefish package being installed? -> Reboot, so all services are started.
