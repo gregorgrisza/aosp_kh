@@ -48,6 +48,7 @@ build/make/core/main.mk:1158: error: exiting from previous errors.
 ```
 
 **Solution**
+
 Wrong definition in device configuration device-mycar_x86.mk, there was incomplete inherit-product value chosen
 
 
