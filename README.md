@@ -11,7 +11,18 @@ sudo apt install git-core gnupg flex bison build-essential zip curl zlib1g-dev l
 # Configure ccache
 mkdir -p ~/.ccache
 ccache -M 50G -F 0
+```
 
+Install Bazel: https://bazel.build/install/ubuntu#install-on-ubuntu
+
+```bash
+# Install android-cuttlefish
+git clone git@github.com:google/android-cuttlefish.git
+cd android-cuttlefish && tools/buildutils/build_packages.sh
+
+sudo dpkg -i ./cuttlefish-base_*_*64.deb || sudo apt-get install -f
+sudo dpkg -i ./cuttlefish-user_*_*64.deb || sudo apt-get install -f
+sudo usermod -aG kvm,cvdnetwork,render $USER
 ```
 
 Update ~/.bashrc
