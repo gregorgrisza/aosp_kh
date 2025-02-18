@@ -88,3 +88,32 @@ Caused by:
 **Solution**
 
 Add permissions, or check if $USER is in proper group: cvdnetwork, kvm
+
+
+---
+## .ccache read-only
+
+**Log**
+```
+ccache: error: Failed to create directory /home/grzegorz.michalak/.ccache/tmp: Read-only file system
+\nWrite to a read-only file system detected. Possible fixes include
+1. Generate file directly to out/ which is ReadWrite, #recommend solution
+2. BUILD_BROKEN_SRC_DIR_RW_ALLOWLIST := <my/path/1> <my/path/2> #discouraged, subset of source tree will be RW
+3. BUILD_BROKEN_SRC_DIR_IS_WRITABLE := true #highly discouraged, entire source tree will be RW
+18:28:15 ninja failed with: exit status 1
+```
+
+**Solution**
+
+Add to ~/.bashrc
+```
+export CCACHE_EXEC=$(which ccache)
+export USE_CCACHE=1
+export CCACHE_DIR=/mnt/ccache
+```
+
+```bash
+sudo mkdir /mnt/ccache
+sudo mount --bind /home/$USER/.ccache /mnt/ccache
+ccache -M 100G -F 0
+```
