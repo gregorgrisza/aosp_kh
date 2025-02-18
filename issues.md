@@ -58,3 +58,14 @@ Wrong definition in device configuration device-mycar_x86.mk, there was incomple
 
 Decrease amount of cores to use during compilation, e.g. if was `m -j16`, use `m -j8`
 
+
+---
+## launch_cvd fails
+
+**Log**
+```
+sh: 1: /usr/lib/cuttlefish-common/bin/capability_query.py: not found
+```
+
+**Solution**
+
