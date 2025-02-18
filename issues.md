@@ -1,6 +1,6 @@
 # Issues
 
-_Note: issues are `stupid` and solutions not generic. It's more list of what happened and steps after issues disappeared.
+_Note: issues are `stupid` and solutions not generic. It's more list of what happened and steps after issues disappeared._
 
 
 ## Missing hostapd
