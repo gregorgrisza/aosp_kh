@@ -68,4 +68,23 @@ sh: 1: /usr/lib/cuttlefish-common/bin/capability_query.py: not found
 ```
 
 **Solution**
+Install android-cuttlefish:
 
+
+---
+## Cuttlefish Virtual Device doesn't start
+
+```bash
+launch_cvd
+```
+
+**Log**
+```
+Caused by:
+    0: failed to open virtual socket device /dev/vhost-vsock
+    1: Permission denied (os error 13)
+```
+
+**Solution**
+
+Add permissions, or check if $USER is in proper group: cvdnetwork, kvm
