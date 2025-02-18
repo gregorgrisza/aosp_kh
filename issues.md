@@ -3,6 +3,7 @@
 _Note: issues are `stupid` and solutions not generic. It's more list of what happened and steps after issues disappeared._
 
 
+---
 ## Missing hostapd
 
 **Log**
@@ -52,6 +53,7 @@ build/make/core/main.mk:1158: error: exiting from previous errors.
 Wrong definition in device configuration device-mycar_x86.mk, there was incomplete inherit-product value chosen
 
 
+---
 ## Compilation interrupted without reason
 
 Decrease amount of cores to use during compilation, e.g. if was `m -j16`, use `m -j8`
