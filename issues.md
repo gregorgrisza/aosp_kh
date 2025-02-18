@@ -4,6 +4,30 @@ _Note: issues are `stupid` and solutions not generic. It's more list of what hap
 
 
 ---
+## Compilation error - missing tests - sv_2d_session_tests, sv_3d_session_tests
+
+**Solution**
+Apply patch
+```
+project platform_testing/
+diff --git a/build/tasks/tests/native_test_list.mk b/build/tasks/tests/native_test_list.mk
+index d0306ea96..03b176065 100644
+--- a/build/tasks/tests/native_test_list.mk
++++ b/build/tasks/tests/native_test_list.mk
+@@ -237,8 +237,8 @@ ifeq ($(BOARD_IS_AUTOMOTIVE), true)
+ native_tests += \
+     libwatchdog_test \
+     evsmanagerd_test \
+-    sv_2d_session_tests \
+-    sv_3d_session_tests
++#    sv_2d_session_tests \
++#    sv_3d_session_tests
+ endif
+ 
+ ifneq ($(strip $(BOARD_PERFSETUP_SCRIPT)),)
+```
+
+---
 ## Missing hostapd
 
 **Log**
