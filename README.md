@@ -51,3 +51,43 @@ If `lunch` doesn't list targets:
 export TARGET_RELEASE=trunk_staging
 build_build_var_cache
 ```
+
+## Goal
+
+## VHAL extension
+
+Add custom vendor VHAL property
+
+ID: 557899439, (0x2140DEAF)
+```
+/**
+ * Extension of VehicleProperty enum declared in Vehicle HAL 2.0
+ */
+enum VehicleProperty: android.hardware.automotive.vehicle@2.0::VehicleProperty {
+
+    /**
+     * For research needs 1s counter
+     *
+     * @change_mode VehiclePropertyChangeMode:ON_CHANGE
+     * @access VehiclePropertyAccess:READ
+     * @data_enum VendorInteriorLightning
+     */
+    VENDOR_INTERIOR_LIGHTNING = (
+      0xDEAF
+      | VehiclePropertyGroup:VENDOR
+      | VehiclePropertyType:INT32
+      | VehicleArea:GLOBAL),
+
+};
+
+/**
+ * Used by VENDOR_INTERIOR_LIGHTNING.
+ */
+enum VendorInteriorLightning : int32_t {
+    // Type is unknown or not in the list below.
+    UNKNOWN = 0,
+    THEME_BLUE = 1,
+    THEME_GREEN = 2,
+    THEME_YELLOW = 3,
+};
+``` 
