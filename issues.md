@@ -157,7 +157,7 @@ Maybe you have just tried after android-cuttlefish package being installed? -> R
 
 
 ---
-## Building andoird-cuttlefish fails
+## Building android-cuttlefish fails
 
 **Log**
 ```
