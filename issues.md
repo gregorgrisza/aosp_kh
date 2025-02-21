@@ -189,6 +189,7 @@ sudo apt install ./libtinfo5_6.3-2ubuntu0.1_amd64.deb
 ```
 
 
+---
 ## repo sync fails
 
 **Description**
@@ -196,3 +197,18 @@ If there are constantly repeating errors of downloading some git repository, e.g
 
 **Solution**
 Remove corresponding project from `.repo/projects` and `.repo/project-objects` . _Note: sometimes path in `projects` is different than the corresponding one in `project-objects`_
+
+
+---
+## CVD doesn't start
+
+**Log**
+```
+[2025-02-21T19:13:00.013559631+00:00 ERROR crosvm] exiting with error 1: the architecture failed to build the vm
+
+Caused by:
+    failed to create a PCI root hub: failed to create proxy device: Failed to fork jail process: Attempt to call fork() while multithreaded
+```
+
+**Solution**
+Use `--gpu_mode=gfxstream` launching CVD
