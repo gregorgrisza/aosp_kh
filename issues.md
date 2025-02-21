@@ -189,7 +189,7 @@ sudo apt install ./libtinfo5_6.3-2ubuntu0.1_amd64.deb
 ```
 
 
-## repo sync failes
+## repo sync fails
 
 **Description**
 If there are constantly repeating errors of downloading some git repository, e.g. error `429`, or `not git repository`, `SyncError` and you have checked internet connection is OK...
