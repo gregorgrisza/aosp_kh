@@ -16,6 +16,19 @@ _Get sockets ports: lsof -i -a -p "$(pgrep -f gui.py)"_
 
 _Use wireshark to check traffic on ports on any interface_
 
+### Task 1
+
+Implement in gui.py handling setting new vendor property in dropbox.
+- generate consts from types.hal
+- add Widget in gui.py
+
+### Task 2
+
+In CVD device there is visible temperature. Change it via gui.py
+- change in CVD on UI and observe gui.py log
+- find property in types.hal and read how to use the property
+- add combobox with allowed temperatures and function setting it
+
 ---
 **AIDL and emu-metadata generation**
 
