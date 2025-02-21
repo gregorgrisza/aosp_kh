@@ -212,3 +212,15 @@ Caused by:
 
 **Solution**
 Use `--gpu_mode=gfxstream` launching CVD
+
+
+---
+## CVD shows black screen fully, or partially
+
+**Description**
+
+CVD after a while shows black screen and after being restarted the issue remains.
+
+**Solution**
+
+Use flag `--resume=false`, e.g. `HOME=$PWD launch_cvd --gpu_mode=gfxstream --resume=false`
