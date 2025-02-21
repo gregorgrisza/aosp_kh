@@ -159,6 +159,7 @@ Maybe you have just tried after android-cuttlefish package being installed? -> R
 ---
 ## Building andoird-cuttlefish fails
 
+**Log**
 ```
 Broken cuttlefish-common-build-deps:amd64 Depends on libtinfo5:amd64 < none @un H >
   Removing cuttlefish-common-build-deps:amd64 because I can't find libtinfo5:amd64
