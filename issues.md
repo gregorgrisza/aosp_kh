@@ -187,3 +187,12 @@ mk-build-deps: Unable to install all build-dep packages
 wget http://security.ubuntu.com/ubuntu/pool/universe/n/ncurses/libtinfo5_6.3-2ubuntu0.1_amd64.deb
 sudo apt install ./libtinfo5_6.3-2ubuntu0.1_amd64.deb
 ```
+
+
+## repo sync failes
+
+**Description**
+If there are constantly repeating errors of downloading some git repository, e.g. error `429`, or `not git repository`, `SyncError` and you have checked internet connection is OK...
+
+**Solution**
+Remove corresponding project from `.repo/projects` and `.repo/project-objects` . _Note: sometimes path in `projects` is different than the corresponding one in `project-objects`_
