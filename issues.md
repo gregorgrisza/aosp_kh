@@ -154,3 +154,35 @@ HOME=${PWD}/out launch_cvd
 **Solution**
 
 Maybe you have just tried after android-cuttlefish package being installed? -> Reboot, so all services are started.
+
+
+---
+## Building andoird-cuttlefish fails
+
+```
+Broken cuttlefish-common-build-deps:amd64 Depends on libtinfo5:amd64 < none @un H >
+  Removing cuttlefish-common-build-deps:amd64 because I can't find libtinfo5:amd64
+Done
+ Done
+Starting pkgProblemResolver with broken count: 0
+Starting 2 pkgProblemResolver with broken count: 0
+Done
+The following packages were automatically installed and are no longer required:
+  libllvm17t64 python3-netifaces
+Use 'sudo apt autoremove' to remove them.
+The following packages will be REMOVED:
+  cuttlefish-common-build-deps
+0 upgraded, 0 newly installed, 1 to remove and 4 not upgraded.
+1 not fully installed or removed.
+After this operation, 9,216 B disk space will be freed.
+(Reading database ... 163508 files and directories currently installed.)
+Removing cuttlefish-common-build-deps (1.2.0) ...
+mk-build-deps: Unable to install cuttlefish-common-build-deps at /usr/bin/mk-build-deps line 460.
+mk-build-deps: Unable to install all build-dep packages
+```
+
+**Solution**
+```bash
+wget http://security.ubuntu.com/ubuntu/pool/universe/n/ncurses/libtinfo5_6.3-2ubuntu0.1_amd64.deb
+sudo apt install ./libtinfo5_6.3-2ubuntu0.1_amd64.deb
+```
