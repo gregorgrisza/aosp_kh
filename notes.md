@@ -1,5 +1,21 @@
 # Notes
 
+
+## GUI.py
+
+Start emulator: `lunch mycar_cf_x86-trunk_staging-userdebug && HOME=$PWD launch_cvd --daemon`
+Open browser on https://localhost:8443/ and start device
+```bash
+python vendor/v/tools/emulator/gui.py
+```
+
+
+_Notes_
+
+_Get sockets ports: lsof -i -a -p "$(pgrep -f gui.py)"_
+
+_Use wireshark to check traffic on ports on any interface_
+
 ---
 **AIDL and emu-metadata generation**
 
