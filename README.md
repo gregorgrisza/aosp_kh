@@ -6,7 +6,7 @@ Ref.: https://source.android.com/docs/setup/start/requirements
 
 ```bash
 sudo apt update
-sudo apt install git-core gnupg flex bison build-essential zip curl zlib1g-dev libc6-dev-i386 x11proto-core-dev libx11-dev lib32z1-dev libgl1-mesa-dev libxml2-utils xsltproc unzip fontconfig libncurses-dev software-properties-common repo ccache python3 python-is-python3 python3-pyqt5
+sudo apt install git-core gnupg flex bison build-essential zip curl zlib1g-dev libc6-dev-i386 x11proto-core-dev libx11-dev lib32z1-dev libgl1-mesa-dev libxml2-utils xsltproc unzip fontconfig libncurses-dev software-properties-common repo ccache python3 python-is-python3 python3-pyqt5 python3-pip python3-protobuf python3-ply
 
 # Configure ccache
 mkdir -p ~/.ccache
