@@ -35,9 +35,8 @@ In CVD device there is visible temperature. Change it via gui.py
 HOME=$PWD launch_cvd --gpu_mode=gfxstream --resume=false
 ```
 _Notes:_
-
-_- frontend logs can be visible in browser (chrome: F12)_
-_- server logs are visible in output from `launch_cv`_
+_frontend logs can be visible in browser (chrome: F12), _
+_server logs are visible in output from `launch_cv`_
 
 **Hack/Patch to activate servers' actions buttons:**
 ```
