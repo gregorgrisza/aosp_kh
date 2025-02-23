@@ -224,3 +224,24 @@ CVD after a while shows black screen and after being restarted the issue remains
 **Solution**
 
 Use flag `--resume=false`, e.g. `HOME=$PWD launch_cvd --gpu_mode=gfxstream --resume=false`
+
+## GUI.py doesn't connect to socket, not starting
+
+**Command**
+
+`emulator`
+
+**Log**
+
+gui.py stops at:
+```
+$ vendor/v/tools/emulator/gui.py 
+Starting VHal driver GUI
+Connecting local port 43189 to remote port 33452 on default device
+```
+
+**Solution**
+
+It might be caused by permission, use `-selinux permissive` option starting emulator:
+
+`emulator -selinux permissive -memory 8192 -writable-system`
