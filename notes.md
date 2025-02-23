@@ -29,6 +29,34 @@ In CVD device there is visible temperature. Change it via gui.py
 - find property in types.hal and read how to use the property
 - add combobox with allowed temperatures and function setting it
 
+## Custom actions and custom actions server
+
+```
+HOME=$PWD launch_cvd --gpu_mode=gfxstream --resume=false
+```
+_Notes:_
+
+_- frontend logs can be visible in browser (chrome: F12)_
+_- server logs are visible in output from `launch_cv`_
+
+**Hack/Patch to activate servers' actions buttons:**
+```
+roject device/google/cuttlefish/
+diff --git a/host/frontend/webrtc/html_client/js/controls.js b/host/frontend/webrtc/html_client/js/controls.js
+index 09d7ad5d1..ea3f114d9 100644
+--- a/host/frontend/webrtc/html_client/js/controls.js
++++ b/host/frontend/webrtc/html_client/js/controls.js
+@@ -236,7 +236,7 @@ function createControlPanelButton(
+   let button = document.createElement('button');
+   document.getElementById(parent_id).appendChild(button);
+   button.title = title;
+-  button.disabled = true;
++  button.disabled = false;
+   addMouseListeners(button, listener);
+   // Set the button image using Material Design icons.
+   // See http://google.github.io/material-design-icons
+```
+
 ---
 **AIDL and emu-metadata generation**
 
