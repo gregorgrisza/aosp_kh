@@ -61,6 +61,8 @@ index 09d7ad5d1..ea3f114d9 100644
 
 Tools in: `hardware/interfaces/automotive/vehicle/tools`
 
+https://cs.android.com/android/platform/superproject/+/main-cuttlefish-vendor-dev:hardware/interfaces/automotive/vehicle/aidl/emu_metadata/generate_emulator_metadata.py?authuser=1&hl=ja 
+
 ---
 **VHAL Host emulator tools**
 
