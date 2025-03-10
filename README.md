@@ -56,6 +56,12 @@ build_build_var_cache
 
 #### Android Studio for Platform
 
+##### GUI
+
+1. Increase max heap
+
+    _(Help ->) Settings -> VM options_ add -Xms1g -Xmx5g (in separate lines)
+   
 1. Use IDEGen to generate android.ipr project file. Instruction can be found at: [development/tools/idegen/README](https://android.googlesource.com/platform/development/+/refs/heads/main/tools/idegen/README)
 
     ```bash
@@ -65,7 +71,27 @@ build_build_var_cache
     ```
     Import generated `$AOSP/android.ipr` in Android Studio
 
-1.
+1. In Java App debugging
+
+    set `android:debuggable="true"` in `AndroidManifest.xml`
+
+    You can use `ps -ATp <PID>` to see if ADB JDWP connector is running
+
+   Get all debug threads by: `adb jdwp`, or DDMS (Dalvik Debug Monitor Service), just run `ddms` (in case of no names issue, try to reset adb in ddms UI)
+
+1. Create debug configuration
+
+    _Run -> Edit Configurations..._ , add a new Remote JVM Debug. Use Port where system_server runs checked via DDMS above, e.g. 8700
+   Command line arguments: `-agentlib:jdwp=transport=dt_socket,server=y,suspend=n,address=*:8700`
+
+1. Run -> Debug <your_cfg_name>
+
+    In the debug console you should see logged: `Connected to ...` message.
+
+##### JDB
+
+Just commandline debugging without previous setup
+
 
 ## Goal
 
