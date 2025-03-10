@@ -52,6 +52,21 @@ export TARGET_RELEASE=trunk_staging
 build_build_var_cache
 ```
 
+### Development environment
+
+#### Android Studio for Platform
+
+1. Use IDEGen to generate android.ipr project file. Instruction can be found at: [development/tools/idegen/README](https://android.googlesource.com/platform/development/+/refs/heads/main/tools/idegen/README)
+
+    ```bash
+    cd $AOSP
+    m idegen
+    . development/tools/idegen/idegen.sh
+    ```
+    Import generated `$AOSP/android.ipr` in Android Studio
+
+1.
+
 ## Goal
 
 ## VHAL extension
