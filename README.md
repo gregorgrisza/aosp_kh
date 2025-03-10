@@ -52,11 +52,9 @@ export TARGET_RELEASE=trunk_staging
 build_build_var_cache
 ```
 
-### Development environment
+### Development environment and debugging
 
 #### Android Studio for Platform
-
-##### GUI
 
 1. Increase max heap
 
@@ -88,9 +86,15 @@ build_build_var_cache
 
     In the debug console you should see logged: `Connected to ...` message.
 
-##### JDB
+
+#### JDB
 
 Just commandline debugging without previous setup
+
+
+#### VS Code
+
+See: https://source.android.com/docs/core/tests/debug/gdb 
 
 
 ## Goal
