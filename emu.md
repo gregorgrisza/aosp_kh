@@ -8,6 +8,26 @@
 
 See: https://android.googlesource.com/platform/external/qemu/+/refs/heads/emu-33-release/android/docs/DARWIN-DEV.md
 
+#### Development tools
+
+- settings.json
+
+```json
+    "files.watcherExclude": {
+        "**/.repo/**": true,
+        "**/external/qemu/objs/**": true,
+        "**/out/**": true
+    }
+```
+
+- watching files
+
+MacOS: `sudo sysctl -w kern.maxfiles=524288`
+
+Ubuntu: Change/Add to /etc/sysctl.conf: `fs.inotify.max_user_watches=524288`
+
+- 
+
 
 ### VHAL extension
 
