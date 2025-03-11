@@ -10,7 +10,7 @@ See: https://android.googlesource.com/platform/external/qemu/+/refs/heads/emu-33
 
 #### Development tools
 
-- settings.json
+- settings.json, see [link](https://code.visualstudio.com/docs/setup/linux#_visual-studio-code-is-unable-to-watch-for-file-changes-in-this-large-workspace-error-enospc)
 
 ```json
     "files.watcherExclude": {
